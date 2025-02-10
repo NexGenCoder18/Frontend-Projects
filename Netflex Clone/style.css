@@ -1,32 +1,37 @@
+/* Reset default margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Set default font family */
 }
 
+/* Set body text color to white and background color to black */
 body {
   color: white;
   background-color: rgb(0, 0, 0);
 }
 
+/* Container for the main layout, using flexbox in a column direction */
 .container {
   display: flex;
   flex-direction: column;
 }
 
+/* Main section with a background image, centered and covering the entire area */
 .main {
   background: url(assets/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 90vh;
+  height: 90vh; /* 90% of the viewport height */
   display: flex;
   flex-direction: column;
   text-align: center;
   position: relative;
 }
 
+/* Overlay for the main section to darken the background image */
 .main-back {
   height: 90vh;
   width: 100%;
@@ -36,21 +41,24 @@ body {
   background-color: black;
 }
 
+/* Navigation bar styling */
 nav {
   max-width: 950px;
   width: 950px;
   height: 100px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the navigation bar */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 10; /* Ensure the nav is above other elements */
 }
 
+/* Logo image in the navigation bar */
 nav img {
   width: 120px;
 }
 
+/* Styling for the select button in the navigation bar */
 nav #selectBtn {
   border: 1px solid white;
   background: transparent;
@@ -62,12 +70,14 @@ nav #selectBtn {
   cursor: pointer;
 }
 
+/* Optional styling for the select button */
 nav #selectBtn:optional {
   background: black;
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
+/* Styling for the sign-in button in the navigation bar */
 nav .signIn {
   background-color: red;
   color: white;
@@ -79,23 +89,27 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Main heading styling */
 .main h1 {
   font-size: 3.2rem;
   margin: 150px 0 20px 0;
   z-index: 10;
 }
 
+/* Span elements within the main section */
 .main span {
   font-size: 1.5rem;
   margin: 10px;
   z-index: 10;
 }
 
+/* Additional span styling */
 .main .span {
   font-size: 1.2rem;
   z-index: 10;
 }
 
+/* Email input container */
 .main .input-email {
   display: flex;
   gap: 20px;
@@ -104,6 +118,7 @@ nav .signIn {
   z-index: 10;
 }
 
+/* Email input field styling */
 .main .input-email input {
   padding: 8px;
   width: 300px;
@@ -114,10 +129,12 @@ nav .signIn {
   border: 1px solid rgb(187, 187, 187);
 }
 
+/* Email input field focus state */
 .main .input-email input:focus {
   border: 2px solid rgb(255, 255, 255);
 }
 
+/* Submit button for email input */
 .main .input-email button {
   padding: 4px;
   background-color: red;
@@ -129,12 +146,14 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Horizontal line divider */
 .hrline {
   height: 8px;
   background-color: rgb(78, 78, 78);
   width: 100%;
 }
 
+/* First section layout */
 .first {
   display: flex;
   justify-content: space-around;
@@ -143,6 +162,7 @@ nav .signIn {
   padding: 30px 0px;
 }
 
+/* Content section within the first section */
 .content {
   display: flex;
   flex-direction: column;
@@ -150,20 +170,24 @@ nav .signIn {
   width: 500px;
 }
 
+/* Span elements within the content section */
 .content span {
   font-size: 2.9rem;
   font-weight: bold;
 }
 
+/* Second span within the content section */
 .content span:nth-child(2) {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
+/* Image container within the first section */
 .first .img {
   position: relative;
 }
 
+/* Image styling within the first section */
 .first .img img {
   width: 480px;
   z-index: 111;
@@ -171,6 +195,7 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Video styling within the first section */
 .first .img video {
   position: absolute;
   right: 98px;
@@ -179,6 +204,7 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Second and fourth sections layout */
 .second,
 .fourth {
   display: flex;
@@ -188,11 +214,13 @@ nav .signIn {
   padding: 30px;
 }
 
+/* Image styling within the second section */
 .second img {
   width: 550px;
   cursor: pointer;
 }
 
+/* Third section layout */
 .third {
   display: flex;
   flex-direction: column;
@@ -202,10 +230,12 @@ nav .signIn {
   padding: 30px;
 }
 
+/* Image container within the third section */
 .third .img {
   position: relative;
 }
 
+/* Image styling within the third section */
 .third .img img {
   position: relative;
   width: 480px;
@@ -213,6 +243,7 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Video styling within the third section */
 .third .img video {
   position: absolute;
   top: 62px;
@@ -221,11 +252,13 @@ nav .signIn {
   cursor: pointer;
 }
 
+/* Image styling within the fourth section */
 .fourth img {
   width: 550px;
   cursor: pointer;
 }
 
+/* FAQ section layout */
 .faq {
   display: flex;
   flex-direction: column;
@@ -234,11 +267,13 @@ nav .signIn {
   margin: 25px;
 }
 
+/* FAQ heading styling */
 .faq h2 {
   font-size: 2.7rem;
   padding: 25px;
 }
 
+/* FAQ box styling */
 .faq .faqBox {
   background-color: rgb(56, 56, 56);
   padding: 15px;
@@ -250,37 +285,44 @@ nav .signIn {
   border-radius: 8px;
 }
 
+/* FAQ image styling */
 .faq img {
   cursor: pointer;
 }
 
+/* Footer layout */
 footer {
   display: flex;
   flex-direction: column;
 }
 
+/* Footer span styling */
 footer span {
   font-size: 1.5rem;
   padding-top: 40px;
   padding-left: 130px;
 }
 
+/* Footer item container */
 footer .footerItem {
   display: flex;
   justify-content: space-between;
 }
 
+/* Footer list styling */
 .footerItem .footerul {
   list-style: none;
   margin: 30px auto;
 }
 
+/* Footer list item styling */
 .footerul li {
   text-decoration: underline;
   margin: 20px;
   cursor: pointer;
 }
 
+/* Responsive design for screens with a max-width of 900px */
 @media (max-width: 900px) {
   .main {
     height: 70vh;
