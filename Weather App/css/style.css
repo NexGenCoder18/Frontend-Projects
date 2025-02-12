@@ -179,3 +179,32 @@ body {
   background-color: transparent !important;
   border: none;
 }
+
+@media (max-width: 500px) {
+  body {
+    height: max-content;
+  }
+  .container {
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  .input {
+    width: 60vw;
+  }
+
+  .infoItem {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+
+  .top {
+    flex-direction: column-reverse;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
