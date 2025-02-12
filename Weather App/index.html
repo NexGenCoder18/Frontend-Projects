@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inpBox">
+        <input type="text" placeholder="Enter Your Location" class="input" />
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="info">
+        <div class="city">City Name</div>
+        <div class="infoItem">
+          <div class="top">
+            <div class="sun">
+              <div class="sunrise">Sunrise: 00:00 AM</div>
+              <div class="sunset">Sunset: 00:00 PM</div>
+            </div>
+            <button id="update-location-btn">
+              <img src="assets/location.svg" alt="" /> Current Location
+            </button>
+          </div>
+          <div class="cards">
+            <div class="card discard">
+              <div class="time">00:00 PM</div>
+              <div class="description">not found</div>
+            </div>
+            <div class="card">
+              <img src="assets/wind.png" alt="" />
+              <div class="wispeed">not found</div>
+            </div>
+            <div class="card">
+              <img src="assets/humidity.png" alt="" />
+              <div class="humidity">not found</div>
+            </div>
+            <div class="card">
+              <img src="assets/pressure.png" alt="" />
+              <div class="pressure">not found</div>
+            </div>
+            <div class="card">
+              <img src="assets/temprature.png" alt="" />
+              <div class="temprature">not found</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
