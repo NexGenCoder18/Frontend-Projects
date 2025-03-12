@@ -1,0 +1,199 @@
+/* Root Variables for Premium Glassmorphism Theme with Water Drop Effect */
+:root {
+  --primary-bg: linear-gradient(135deg, #1b1b1b, #2e2e2e, #3f3f3f);
+  --glass-bg: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --text-color: #00eaff;
+  --shadow-color: rgba(0, 255, 255, 0.5);
+  --button-bg: rgba(255, 255, 255, 0.15);
+  --button-hover: rgba(255, 255, 255, 0.25);
+  --special-btn-bg: rgba(255, 0, 89, 0.4);
+  --special-btn-hover: rgba(255, 0, 89, 0.6);
+  --equal-btn-bg: rgba(0, 255, 126, 0.4);
+  --equal-btn-hover: rgba(0, 255, 126, 0.6);
+  --operator-btn-bg: rgba(24, 220, 255, 0.4);
+  --operator-btn-hover: rgba(24, 220, 255, 0.6);
+}
+
+/* Water Drop Background Effect */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/water.png');
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Water Drop Animation */
+@keyframes waterDrop {
+  0% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(0) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary-bg);
+  font-family: "Inter", "Poppins", "Montserrat", sans-serif;
+}
+
+/* Glassmorphism Calculator */
+.calculator {
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(22px);
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Input Field */
+.input input {
+  width: 100%;
+  height: 90px;
+  font-size: 36px;
+  text-align: right;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 25px;
+  box-shadow: inset 0px 4px 14px var(--shadow-color);
+  backdrop-filter: blur(22px);
+  animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Button Styling */
+button {
+  padding: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 18px var(--shadow-color);
+  text-shadow: 0px 0px 8px var(--shadow-color);
+  backdrop-filter: blur(16px);
+  animation: popIn 0.4s ease-in-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover Effect */
+button:hover {
+  background: var(--button-hover);
+  box-shadow: 0px 6px 26px var(--shadow-color);
+  animation: waterDrop 0.6s ease-in-out;
+}
+
+/* Button Click Animation */
+button:active {
+  transform: translateY(5px) scale(0.94);
+  box-shadow: 0px 0px 28px var(--shadow-color);
+}
+
+/* Special Buttons */
+button:nth-child(1) {
+  background: var(--special-btn-bg);
+}
+button:nth-child(1):hover {
+  background: var(--special-btn-hover);
+}
+
+button:nth-child(2) {
+  background: var(--operator-btn-bg);
+}
+button:nth-child(2):hover {
+  background: var(--operator-btn-hover);
+}
+
+button:nth-child(19) {
+  grid-column: span 2;
+  background: var(--equal-btn-bg);
+}
+button:nth-child(19):hover {
+  background: var(--equal-btn-hover);
+}
+
+/* Operator Buttons */
+button[data-operator] {
+  background: var(--operator-btn-bg);
+}
+button[data-operator]:hover {
+  background: var(--operator-btn-hover);
+}
+
+/* Zero Button */
+button.zero {
+  grid-column: span 2;
+}
